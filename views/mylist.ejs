@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To Do List</title>  
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1>Today</h1>
+    </div>
+    <div class="box">
+            <% newItems.forEach(function(item) { %>
+                <form action="/delete" method="POST">
+                    <div class="item">
+                        <input type="checkbox" name ="checkbox" value="<%= item %>" onchange="this.form.submit()">
+                        <p><%= item %></p>
+                    </div>
+                </form>
+            <% }) %>
+        <form action="/mylist" method="POST" class="item">
+            <input type="text" placeholder="What's Next" name="newItem" autocomplete="off">
+            <button type="submit">+</button>
+        </form>    
+    </div>
+    
+    <div>
+        <form action="/logout" method="POST">
+            <button class="btn peach-gradient" type="submit">LogOut</button>
+         </form>
+    </div>
+    
+</body>
+<footer class="page-footer font-small black fixed-bottom">
+    <div class="footer-copyright text-center py-3">
+        Made with ❤ in India
+    </div>
+</footer>
+</html>
