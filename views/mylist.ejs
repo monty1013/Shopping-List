@@ -31,13 +31,15 @@
             <% }) %>
         <form action="/mylist" method="POST" class="item">
             <input type="text" placeholder="What's Next" name="newItem" autocomplete="off">
-            <button type="submit">+</button>
+            <button  class="addbtn" type="submit">+</button>
         </form>    
     </div>
-    
+
     <div>
         <form action="/logout" method="POST">
-            <button class="btn peach-gradient" type="submit">LogOut</button>
+            <div class="logbutdiv">
+                <button class="logbut" type="submit">LogOut</button>
+            </div>
          </form>
     </div>
     
