@@ -1,5 +1,5 @@
-# To-do-List
-WebApp using NodeJs to create personal todo list.
+# Shopping-List
+WebApp using NodeJs to create personal Shopping list.
 Users can use google account to login.
 
 ![Homepage](https://github.com/monty1013/To-do-List/blob/master/screenshots/list.png?raw=true)
